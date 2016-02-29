@@ -10,6 +10,11 @@ npm install -g flowtex
 
 You have to install tex/flowtex.sty in your LaTeX working directory to use it.
 
+```bash
+wget https://raw.githubusercontent.com/pierre-luc/flowtex/master/tex/flowtex.sty
+```
+
+
 Flowtex use LaTeX packages: tikz and xcolor. The extension flowtex import tikz
 and xcolor.
 
