@@ -1,10 +1,11 @@
-N("start node").below(
-    P("Entry point").origin("a").left(
-        IO("Input task")
-            .left(
-                P('LeftNode').origin("a").downLabel("label A")
-            ).right(
-                P('RightNode').target("a").leftLabel("label B")
-            )
+N("Node A")
+    .origin("a")
+    .target("b").rightLabel("Label C")
+.below(
+    P("Node B").origin("b").origin("c")
+    .left(
+        P("Node C")
+            .target("a").leftLabel("Label B")
+            .target("c").downLabel("label A")
     )
 );
