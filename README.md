@@ -8,7 +8,7 @@ Flowtex allows to easily create flowcharts with tikz for LaTeX.
 npm install -g flowtex
 ```
 
-You have to install tex/flowtex.tex in your LaTeX working directory to use it.
+You have to install tex/flowtex.sty in your LaTeX working directory to use it.
 
 Flowtex use LaTeX packages: tikz and xcolor. The extension flowtex import tikz
 and xcolor.
@@ -19,20 +19,25 @@ and xcolor.
 
 ### Input Flowtex code
 ```javascript
+flowchart.offsetX("3");
+flowchart.unit("cm");
+
 N("Node A")
     .origin("a")
     .target("b").rightLabel("Label C")
 .below(
     P("Node B").origin("b").origin("c")
-    .offsetX("3cm")
     .left(
-        P("Node C")
-            .offsetX("-3cm")
+        P("Node C").offsetXOpp()
             .target("a").leftLabel("Label B")
             .target("c").downLabel("label A")
     )
+    .right(
+        P("Node D")
+            .target("a").rightLabel("Label D")
+            .target("c").downLabel("label C")
+    )
 );
-
 ```
 
 ### Generate latex code
@@ -42,15 +47,17 @@ flowtex sample.js
 
 ### Output Tikz code for LaTeX:
 ```latex
-\begin{tikzpicture}[node distance=2cm]
-    % Node declarations
-    \node (nodea) [startstop] {Node A};
-    \node (nodeb) [process, below of=nodea, xshift=3] {Node B};
-    \node (nodec) [process, left of=nodeb, xshift=-3cm] {Node C};
-
-    % Arrow declarations
-    \draw [arrow] (nodea) --node[anchor=east] {Label B} (nodec);
-    \draw [arrow] (nodeb) --node[anchor=west] {Label C} (nodea);
-    \draw [arrow] (nodeb) --node[anchor=north] {label A} (nodec);
-\end{tikzpicture}
+\begin{center}
+    \begin{tikzpicture}[node distance=2cm]
+        \node (nodea) [startstop] {Node A};
+        \node (nodeb) [process, below of=nodea] {Node B};
+        \node (nodec) [process, left of=nodeb, xshift=-3cm] {Node C};
+        \node (noded) [process, right of=nodeb, xshift=3cm] {Node D};
+        \draw [arrow] (nodea) --node[anchor=east] {Label B} (nodec);
+        \draw [arrow] (nodea) --node[anchor=west] {Label D} (noded);
+        \draw [arrow] (nodeb) --node[anchor=west] {Label C} (nodea);
+        \draw [arrow] (nodeb) --node[anchor=north] {label A} (nodec);
+        \draw [arrow] (nodeb) --node[anchor=north] {label C} (noded);
+    \end{tikzpicture}
+\end{center}
 ```
