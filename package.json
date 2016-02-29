@@ -1,0 +1,18 @@
+{
+  "name": "flowtex",
+  "version": "1.0.0",
+  "description": "easy flowchart latex",
+  "main": "lib",
+  "bin": "bin/flowtex",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "easy",
+    "flowchart",
+    "latex"
+  ],
+  "author": "Pierre-Luc BLOT",
+  "license": "ISC",
+  "files": [ "bin", "lib" ]
+}
