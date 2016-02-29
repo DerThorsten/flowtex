@@ -15,7 +15,7 @@ and xcolor.
 
 ## Example
 
-![Sample render](https://github.com/pierre-luc/flowtex/sample/sample.png)
+![Sample render](https://raw.githubusercontent.com/pierre-luc/flowtex/master/sample/sample.png)
 
 ### Input Flowtex code
 ```javascript
