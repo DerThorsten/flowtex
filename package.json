@@ -13,6 +13,9 @@
     "flowchart",
     "latex"
   ],
+  "bugs": {
+      "url": "https://github.com/pierre-luc/flowtex/issues"
+  },
   "author": "Pierre-Luc BLOT",
   "license": "ISC",
   "files": [ "bin", "lib" ]
