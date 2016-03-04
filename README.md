@@ -22,7 +22,28 @@ and xcolor.
 
 ![Sample render](https://raw.githubusercontent.com/pierre-luc/flowtex/master/sample/sample.png)
 
-### Input Flowtex code
+### Input Easy Flowtex code
+Nodes declarations first and arrows declarations in second time.
+```javascript
+flowchart.offsetX("3");
+flowchart.unit("cm"); // default
+
+a = N("Node A")
+.below(
+    b = P("Node B")
+    .left(c = P("Node C"))
+    .right(d = P("Node D"))
+);
+
+a.goto(c).leftLabel('Label C');
+a.goto(d).rightLabel('Label D');
+b.goto(a).rightLabel('Label C');
+b.goto(c).downLabel('Label A');
+b.goto(d).downLabel('Label C');
+```
+
+### Input Rich Flowtex code
+Nodes declarations and arrows declarations in same time.
 ```javascript
 flowchart.offsetX("3");
 flowchart.unit("cm"); // default
@@ -54,15 +75,15 @@ flowtex sample.js
 ```latex
 \begin{center}
     \begin{tikzpicture}[node distance=2cm]
-        \node (nodea) [startstop] {Node A};
-        \node (nodeb) [process, below of=nodea] {Node B};
-        \node (nodec) [process, left of=nodeb, xshift=-3cm] {Node C};
-        \node (noded) [process, right of=nodeb, xshift=3cm] {Node D};
-        \draw [arrow] (nodea) --node[anchor=east] {Label B} (nodec);
-        \draw [arrow] (nodea) --node[anchor=west] {Label D} (noded);
-        \draw [arrow] (nodeb) --node[anchor=west] {Label C} (nodea);
-        \draw [arrow] (nodeb) --node[anchor=north] {label A} (nodec);
-        \draw [arrow] (nodeb) --node[anchor=north] {label C} (noded);
+        \node (node0) [startstop] {Node A};
+        \node (node1) [process, below of=node0] {Node B};
+        \node (node2) [process, left of=node1, xshift=-3cm] {Node C};
+        \node (node3) [process, right of=node1, xshift=3cm] {Node D};
+        \draw [arrow] (node0) --node[anchor=east] {Label B} (node2);
+        \draw [arrow] (node0) --node[anchor=west] {Label D} (node3);
+        \draw [arrow] (node1) --node[anchor=west] {Label C} (node0);
+        \draw [arrow] (node1) --node[anchor=north] {label A} (node2);
+        \draw [arrow] (node1) --node[anchor=north] {label C} (node3);
     \end{tikzpicture}
 \end{center}
 ```
