@@ -19,7 +19,7 @@ Flowtex use LaTeX packages: tikz and xcolor. The extension flowtex import tikz
 and xcolor.
 
 ## How to
-[tutorial](https://raw.githubusercontent.com/pierre-luc/flowtex/master/sample/tuto/tuto.md)
+[tutorial](https://github.com/pierre-luc/flowtex/blob/master/sample/tuto/tuto.md)
 
 ## Example
 
