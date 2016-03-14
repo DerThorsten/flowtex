@@ -10,6 +10,13 @@
     * **D**: Conditionnal node
     * **IO**: Input or output node
     * **P**: Process node
+* LaTeX Formatter:
+  * Arrows:
+    * <- : $\leftarrow$
+    * -> : $\rightarrow$
+  * Text
+    * Bold
+      * \*text\* : \textbf{text}
 * Methods:
   * Size:
     * _node_.width(_Number_)
