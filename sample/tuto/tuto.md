@@ -10,8 +10,10 @@
     * **D**: Conditionnal node
     * **IO**: Input or output node
     * **P**: Process node
-
 * Methods:
+  * Size:
+    * _node_.width(_Number_)
+
   * Placements:
     * _originNode_.above(_node_): _node_ is above of _originNode_
     * _originNode_.below(_node_): _node_ is below of _originNode_

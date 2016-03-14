@@ -4,7 +4,7 @@ flowchart.unit("cm"); // default
 a = N("Node A")
 .below(
     b = P("Node B")
-    .left(c = P("Node C"))
+    .left(c = P("Node C")).width(3)
     .right(d = P("Node D"))
 );
 
