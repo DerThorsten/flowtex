@@ -1,6 +1,6 @@
 {
   "name": "flowtex",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "easy flowchart latex",
   "main": "lib",
   "bin": "bin/flowtex",
