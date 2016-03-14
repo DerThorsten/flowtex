@@ -18,6 +18,9 @@ wget https://raw.githubusercontent.com/pierre-luc/flowtex/master/tex/flowtex.sty
 Flowtex use LaTeX packages: tikz and xcolor. The extension flowtex import tikz
 and xcolor.
 
+## How to
+[tutorial](https://raw.githubusercontent.com/pierre-luc/flowtex/master/sample/tuto/tuto.md)
+
 ## Example
 
 ![Sample render](https://raw.githubusercontent.com/pierre-luc/flowtex/master/sample/sample.png)
@@ -28,18 +31,16 @@ Nodes declarations first and arrows declarations in second time.
 flowchart.offsetX("3");
 flowchart.unit("cm"); // default
 
-a = N("Node A")
-.below(
-    b = P("Node B")
-    .left(c = P("Node C"))
-    .right(d = P("Node D"))
+a = N("Node A").below(
+  b = P("Node B")
+    .leftGoto(c = P("Node C")).downLabel('Label A')
+    .rightGoto(d = P("Node D")).downLabel('Label C')
 );
 
 a.goto(c).leftLabel('Label C');
 a.goto(d).rightLabel('Label D');
 b.goto(a).rightLabel('Label C');
-b.goto(c).downLabel('Label A');
-b.goto(d).downLabel('Label C');
+
 ```
 
 ### Input Rich Flowtex code
