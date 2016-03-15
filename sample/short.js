@@ -8,7 +8,7 @@ a = N("Node A")
     .right(d = P("Node D"))
 );
 
-a.goto(c).leftLabel('Label C');
+a.goto(c).brokenArrow().offsetArrow(4, 0).leftLabel('Label C');
 a.goto(d).rightLabel('Label D');
 b.goto(a).rightLabel('Label C');
 b.goto(c).downLabel('Label A');

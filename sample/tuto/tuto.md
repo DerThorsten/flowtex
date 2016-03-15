@@ -29,6 +29,9 @@
 
   * Arrows:
     * _originNode_.goto(_targetNode_)
+      * Arrow style as next goto declaration:
+        _gotoCall_(_targetNode_).brokenArrow(): |- tikz style
+        _gotoCall_(_targetNode_).offsetArrow(x, y): offsets of start point from origin node
 
   * Placements with Arrows:
     * _originNode_.aboveGoto(_node_)

@@ -1,7 +1,7 @@
 {
   "name": "flowtex",
-  "version": "1.4.2",
-  "description": "easy flowchart latex",
+  "version": "1.5.0",
+  "description": "easy flowchart latex using tikz",
   "main": "lib",
   "bin": "bin/flowtex",
   "repository": "pierre-luc/flowtex",
@@ -11,7 +11,8 @@
   "keywords": [
     "easy",
     "flowchart",
-    "latex"
+    "latex",
+    "tikz"
   ],
   "bugs": {
       "url": "https://github.com/pierre-luc/flowtex/issues"
