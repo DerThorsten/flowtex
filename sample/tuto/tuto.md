@@ -16,7 +16,7 @@
     * -> : $\rightarrow$
   * Text
     * Bold
-      * \*text\* : \textbf{text}
+      * \*\*text\*\* : \textbf{text}
 * Methods:
   * Size:
     * _node_.width(_Number_)
