@@ -18,6 +18,10 @@ wget https://raw.githubusercontent.com/pierre-luc/flowtex/master/tex/flowtex.sty
 Flowtex use LaTeX packages: tikz and xcolor. The extension flowtex import tikz
 and xcolor.
 
+## Render based on
+The record is based on the following external definitions:
+https://www.sharelatex.com/blog/2013/08/29/tikz-series-pt3.html
+
 ## How to
 [tutorial](https://github.com/pierre-luc/flowtex/blob/master/sample/tuto/tuto.md)
 
