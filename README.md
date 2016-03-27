@@ -19,8 +19,51 @@ Flowtex use LaTeX packages: tikz and xcolor. The extension flowtex import tikz
 and xcolor.
 
 ## Render based on
-The **flowtex.sty** is based on the following external definitions:
+The extension **flowtex.sty** is based on the following external definitions:
 https://www.sharelatex.com/blog/2013/08/29/tikz-series-pt3.html
+
+## API
+* Template:
+  * Nodes:
+    * **N**: Start or stop node
+    * **D**: Conditionnal node
+    * **IO**: Input or output node
+    * **P**: Process node
+* LaTeX Formatter:
+  * Arrows:
+    * <- : $\leftarrow$
+    * -> : $\rightarrow$
+  * Text
+    * Bold
+      * \*\*text\*\* : \textbf{text}
+* Methods:
+  * Size:
+    * ```_node_.width(_Number_)```
+
+  * Placements:
+    * ```_originNode_.above(_node_)```: _node_ is above of _originNode_
+    * ```_originNode_.below(_node_)```: _node_ is below of _originNode_
+    * ```_originNode_.left(_node_)```: _node_ is left of _originNode_
+    * ```_originNode_.right(_node_)```: _node_ is right of _originNode_
+
+  * Arrows:
+    * ```_originNode_.goto(_targetNode_)```
+      * Arrow style as next goto declaration:
+        ```_gotoCall_(_targetNode_).brokenArrow()```: |- tikz style
+        ```_gotoCall_(_targetNode_).offsetArrow(x, y)```: offsets of start point from origin node
+
+  * Placements with Arrows:
+    * ```_originNode_.aboveGoto(_node_)```
+    * ```_originNode_.belowGoto(_node_)```
+    * ```_originNode_.leftGoto(_node_)```
+    * ```_originNode_.rightGoto(_node_)```
+
+  * Labels:
+    * ```leftLabel(_string_)```
+    * ```rightLabel(_string_)```
+    * ```topLabel(_string_)```
+    * ```downLabel(_string_)```
+
 
 ## How to
 [tutorial](https://github.com/pierre-luc/flowtex/blob/master/sample/tuto/tuto.md)

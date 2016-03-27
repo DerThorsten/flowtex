@@ -15,4 +15,4 @@ N('Start').belowGoto(
   ).leftLabel('Start loop')
 ).leftLabel('Init');
 
-kp1.goto(loop);
+kp1.goto(loop).brokenArrow();
